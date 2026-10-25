@@ -1,0 +1,2 @@
+../src/BSP/watchdog.c:17:9:watchdog_init	2
+../src/BSP/watchdog.c:34:9:watchdog_refresh	1

@@ -1,0 +1,7 @@
+../src/BSP/periph_init.c:23:9:periph_init	16	static
+../src/BSP/periph_init.c:62:13:MX_I2C1_Init	8	static
+../src/BSP/periph_init.c:83:13:MX_SPI1_Init	8	static
+../src/BSP/periph_init.c:106:13:MX_TIM2_Init	32	static
+../src/BSP/periph_init.c:138:13:MX_USART2_UART_Init	8	static
+../src/BSP/periph_init.c:158:16:SystemClock_Config	88	static
+../src/BSP/periph_init.c:207:13:MX_GPIO_Init	40	static
