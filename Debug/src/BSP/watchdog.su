@@ -1,2 +1,0 @@
-../src/BSP/watchdog.c:17:9:watchdog_init	16	static
-../src/BSP/watchdog.c:34:9:watchdog_refresh	8	static

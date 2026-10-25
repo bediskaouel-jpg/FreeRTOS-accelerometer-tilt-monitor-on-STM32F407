@@ -1,3 +1,0 @@
-../src/Apk/main_apk.c:21:5:MainApk_Init	6
-../src/Apk/main_apk.c:53:6:vApplicationStackOverflowHook	1
-../src/Apk/main_apk.c:65:6:vApplicationIdleHook	1

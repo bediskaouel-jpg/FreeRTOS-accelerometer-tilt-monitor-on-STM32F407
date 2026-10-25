@@ -1,2 +1,0 @@
-../src/BSP/accelero.c:21:9:acc_init	2
-../src/BSP/accelero.c:36:9:acc_getdata	1

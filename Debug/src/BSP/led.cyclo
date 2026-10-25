@@ -1,5 +1,0 @@
-../src/BSP/led.c:21:6:led_init	1
-../src/BSP/led.c:42:6:led_red_control	2
-../src/BSP/led.c:59:6:led_green_control	2
-../src/BSP/led.c:75:6:led_blue_control	2
-../src/BSP/led.c:90:6:led_orange_control	2
