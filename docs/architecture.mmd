@@ -1,0 +1,15 @@
+flowchart TD
+    subgraph MCU["STM32F407 · FreeRTOS"]
+        ACC["Accelerometer<br/>LIS3DSH (SPI1)"] --> ST["SensorTask<br/>prio 2 · every 50 ms"]
+        ST -->|xQueueOverwrite| SQ[("SensorQueue<br/>length 1")]
+        SQ --> LT["LedTask<br/>prio 3 · every 100 ms"]
+        LT --> LEDS["4 LEDs<br/>PD12–PD15"]
+        RX["USART2 RX ISR<br/>frame parser"] -->|xQueueSendFromISR| UQ[("QueueUART<br/>length 4")]
+        BTN["User button<br/>EXTI0 ISR"] -->|reset command| UQ
+        UQ --> UT["UARTTask<br/>prio 1 · event-driven"]
+        UT -->|"LED enable, thresholds"| LT
+        ST -->|0xA1 frame| TX["SendFrame()<br/>mutex-protected"]
+        UT -->|0xB1 ack| TX
+    end
+    TX -->|"USART2 · 115200 8N1"| PC["PC dashboard (PyQt5)"]
+    PC -->|commands| RX
